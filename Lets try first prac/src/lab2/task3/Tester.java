@@ -3,30 +3,34 @@ package lab2.task3;
 import java.util.Arrays;
 
 public class Tester {
-    private Circle[] circles;
+    private Circle[] circles = new Circle[10];
     private int size = 0;
 
-    public Tester(Circle[] circles) {
-        this.circles = circles;
+    public Circle[] getCircles() {
+        return circles;
     }
 
-    private void addCircle(Circle c){
+    public void addCircle(Circle c){
         this.circles[size] = c;
-        this.size += 1;
+        changeSize();
     }
+
+    public void changeSize(){this.size += 1;}
 
     public void main(String[] args) {
-        Point centre1 = new Point(0.0, 0.0);
-        Point centre2 = new Point(3.0, 2.0);
-        Circle c1 = new Circle(centre1, 3.0);
-        Circle c2 = new Circle(centre2, 6.0);
+        Circle c1 = new Circle(new Point(0.0, 0.0), 0.0);
+        Circle c2 = new Circle(new Point(1.0, 1.0), 6.0);
+
+        c1.setCentre(4.0, 7.0);
+        c1.setRadius(5.0);
+
+        c1.getCentre();
+        c1.getRadius();
 
         addCircle(c1);
         addCircle(c2);
 
-        c1.setCentre(3.0, 2.0);
-        c2.setRadius(4.0);
-
-        System.out.println(Arrays.toString(circles));
+        System.out.println(Arrays.toString(getCircles()));
+        System.out.println(c1);
     }
 }
