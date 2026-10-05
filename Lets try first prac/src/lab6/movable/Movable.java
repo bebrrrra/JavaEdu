@@ -1,6 +1,6 @@
-package lab6;
+package lab6.movable;
 
-interface Movable {
+public interface Movable {
     void moveUp();
     void moveDown();
     void moveLeft();

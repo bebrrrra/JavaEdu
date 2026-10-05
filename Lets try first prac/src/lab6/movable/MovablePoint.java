@@ -1,6 +1,6 @@
-package lab6;
+package lab6.movable;
 
-public class MovablePoint {
+public class MovablePoint implements Movable {
     private int x;
     private int y;
     private int xSpeed;
@@ -14,7 +14,24 @@ public class MovablePoint {
     }
 
     @Override
-    public
+    public void moveUp(){
+        this.y += ySpeed;
+    }
+
+    @Override
+    public void moveDown() {
+        this.y -= ySpeed;
+    }
+
+    @Override
+    public void moveLeft() {
+        this.x -= xSpeed;
+    }
+
+    @Override
+    public void moveRight() {
+        this.x += xSpeed;
+    }
 
     @Override
     public String toString(){
