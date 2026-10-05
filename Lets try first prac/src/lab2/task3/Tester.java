@@ -17,7 +17,8 @@ public class Tester {
 
     public void changeSize(){this.size += 1;}
 
-    public void main(String[] args) {
+    public static void main(String[] args) {
+        Tester tester = new Tester();
         Circle c1 = new Circle(new Point(0.0, 0.0), 0.0);
         Circle c2 = new Circle(new Point(1.0, 1.0), 6.0);
 
@@ -27,10 +28,10 @@ public class Tester {
         c1.getCentre();
         c1.getRadius();
 
-        addCircle(c1);
-        addCircle(c2);
+        tester.addCircle(c1);
+        tester.addCircle(c2);
 
-        System.out.println(Arrays.toString(getCircles()));
-        System.out.println(c1);
+        System.out.println("List of circles:");
+        System.out.println(Arrays.toString(tester.getCircles()));
     }
 }
