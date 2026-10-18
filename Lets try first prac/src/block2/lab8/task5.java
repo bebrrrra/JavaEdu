@@ -1,4 +1,4 @@
-package block2;
+package block2.lab8;
 
 public class task5 {
     public static int f(int n){

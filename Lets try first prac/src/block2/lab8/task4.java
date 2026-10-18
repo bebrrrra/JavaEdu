@@ -1,4 +1,4 @@
-package block2;
+package block2.lab8;
 
 import java.util.Scanner;
 
